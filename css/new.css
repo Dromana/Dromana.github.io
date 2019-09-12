@@ -1,0 +1,180 @@
+.header-projects {
+  padding: 50px 0px 0px 0px;
+  color: white;
+  text-align: center;
+}
+.project-container {
+  width: 80%;
+  margin: auto;
+}
+.project {
+  border-radius: 10px 10px;
+  border: 5px solid white;
+}
+
+.project img {
+  /* LOKER IMG*/
+  height: 15px;
+  width: 15px;
+}
+#Demo,
+#Github {
+  cursor: pointer;
+  align-content: center;
+}
+.Contairner-1 {
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  padding: 50px;
+}
+
+.Contairner-1 p {
+  padding: 30px 0px 0px 0px;
+}
+
+/* positions*/
+#pro5 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#pro6 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#pro1 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#pro2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#pro3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#pro4 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+/* Sections*/
+
+.contac-section {
+  width: 100%;
+  height: 100vh;
+}
+.Project-section {
+  width: 100%;
+  height: 100vh;
+}
+.About_section {
+  width: 100%;
+  height: 100vh;
+}
+
+.Header-section {
+  width: 100%;
+  height: 100vh;
+}
+
+/* contacte me main*/
+.container-contac {
+  width: 80%;
+  margin: auto;
+  color: white;
+}
+
+.contac-section h2 {
+  padding: 15px;
+  text-align: center;
+}
+
+.social-icons-contac {
+  margin: auto;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-left: 85px;
+  margin-top: 150px;
+}
+.emailtext1 {
+  width: 1rem;
+  position: relative;
+  padding: 8px;
+  margin-left: -200px;
+  color: white;
+}
+
+#icons1 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contact-paragraph {
+  margin-top: 200px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .test {
+    margin: 100px auto;
+  }
+  .section3-container {
+    margin: 200px auto;
+    margin: 200px auto;
+  }
+
+  .Contairner-1 {
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5%;
+    padding: 50px;
+  }
+
+  .Contairner-1 p {
+    padding: 30px 0px 0px 0px;
+  }
+
+  /* positions*/
+  #pro5 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #pro6 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #pro1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #pro2 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  #pro3 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  #pro4 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .container-contac {
+    margin: 600px auto;
+  }
+}
