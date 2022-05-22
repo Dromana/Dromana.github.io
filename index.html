@@ -4,249 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
-    <link rel="icon" href="./imagens/web-icon.png" type="image/x-icon" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./css/Style.css" />
-    <link rel="stylesheet" href="./css/new.css" />
     <title>Diogo Romana</title>
-  </head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+  <style>
+    .ml2,.ml3,.navbar{
+        font-family: 'Caveat', cursive;
+        font-size: 1.5em;
+    }
+    .ml2 {
+        font-weight: 900;
+        font-size: 3.5em;
+    }
+    .ml2,.ml3 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+    .ml3 {
+        font-weight: 900;
+        font-size: 2em;
+    }
+  </style>
   <body>
-    <section class="Header-section" id="section-heder">
-      <div class="header-container">
-        <header>
-          <img class="me" src="./imagens/me.jpg" alt="" />
-          <div class="logo-container">
-            <h4 class="logotext">
-              Diogo Romana
-            </h4>
-          </div>
-          <nav>
-            <ul class="nav-links">
-              <li>
-                <a class="nav-link" id="aboutme" href="#section2">About me</a>
-              </li>
-              <li>
-                <a class="nav-link" id="lp" href="#section3">Projects</a>
-              </li>
-              <li>
-                <a class="nav-link" id="contac" href="#contac-section"
-                  >Contact me</a
-                >
-              </li>
-            </ul>
-          </nav>
-          <div class="Curriculo-container">
-            <nav>
-              <li><a class="nav-curriculo" href="#">Download Curriculum</a></li>
-            </nav>
-          </div>
-          <img class="loker" src="./imagens/loker.png" />
-        </header>
-      </div>
-
-      <div class="nav_main">
-        <h2>Some of my Projects</h2>
-      </div>
-
-      <div class="slider">
-        <img
-          src="./imagens/web-icon.png"
-          alt="error"
-          id="current_image"
-          class="images_sliding"
-        />
-
-        <button class="prew fa fa-chevron-left" class="button-icon"></button>
-        <button class="next fa fa-chevron-right" class="button-icon"></button>
-      </div>
-      <div class="social-container">
-        <div class="social-icons">
-          <li><a href="#" class="fa fa-linkedin" id="icons"></a></li>
-          <li><a href="#" class="fa fa-skype" id="icons"></a></li>
-          <li>
-            <i class="fa fa-envelope-open-o" aria-hidden="true" id="icons"></i>
-          </li>
-          <div class="emailtext">
-            <h4 id="emailid">d.romana1996@gmail.com</h4>
-          </div>
-        </div>
-      </div>
+    <section id="nav_bar">
+        <!-- As a heading -->
+        <nav class="navbar fixed-top  navbar-expand-sm navbar-dark" style="background-color:rgb(59, 53, 53, 0 )">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="animate_text()">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="move_to('about_me')">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="move_to('projects')">Projects</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" onclick="move_to('contacts')">Contacts</a></li> -->
+                        <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <span class="navbar-text">
+                    <form class="form-inline">
+                        <a href="https://www.linkedin.com/in/diogo-romana-984024156/" class="btn btn-sm btn-outline-secondary" role="button"><i class="fab fa-linkedin"></i></a>
+                        <a href="skype:diogoromana?userinfo" class="btn btn-sm btn-outline-secondary" role="button"><i class="fab fa-skype"></i></a>
+                        <button type="button" style="color:white" class="btn btn-sm btn-outline-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="d.romana1996@gmail.com">
+                            <i class="far fa-envelope"></i>
+                        </button>
+                        <a href="https://github.com/Dromana" class="btn btn-sm btn-outline-secondary" role="button"><i class="fab fa-github"></i></a>
+                    </form>
+                </span>
+            </div>
+        </nav>
     </section>
-    <main>
-      <section class="About_section" id="section2">
-        <div class="test">
-          <div class="cointer-aboutme">
-            <h2>About me</h2>
-            <p id="about-me-paragrafo">
-              Hello my name is Diogo Romana and i studied Eletronic,
-              Telecommunications and Computer Engineering at ISEL-Instituto
-              Superior de Engenharia de Lisboa, where i got my Degree . I did a
-              lot of academic projects, but also i do a lot of personal
-              projects. Theres some skills that i acquired.
-            </p>
-            <table>
-              <tr>
-                <th>Operating system</th>
-                <th>Applications</th>
-                <th>Laguages</th>
-                <th>Area</th>
-              </tr>
-              <tr>
-                <td>VMware Linux/Ubunto</td>
-                <td>Genady</td>
-                <td>C</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>Does not apply</td>
-                <td>Matlab 2015</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>Notepad++</td>
-                <td>Assembly</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>IntelliJ IDEA</td>
-                <td>Java</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>DBeaver</td>
-                <td>MySQL</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>Visual Studio</td>
-                <td>C#</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>Arduino IDE</td>
-                <td>C++</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>Visual Studio</td>
-                <td>HTML,CSS, JavaScript</td>
-                <td>Programing</td>
-              </tr>
-              <tr>
-                <td>Windows</td>
-                <td>LTspice</td>
-                <td>Does not apply</td>
-                <td>Eletronics</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section class="Project-section" id="section3">
-        <div class="section3-container">
-          <div class="header-projects">
-            <h2>Projects</h2>
-          </div>
-
-          <div class="project-container">
-            <div class="Contairner-1">
-              <div class="project" id="pro1">
-                <span id="Github">Github</span>
-
-                <p>Radio Bemm Software</p>
-                <p>Matlab 2015</p>
-              </div>
-              <div class="project" id="pro2">
-                <span id="Github">Github</span>
-
-                <p>Mini Voltimetro</p>
-                <p>C++/Arduino</p>
-              </div>
-
-              <div class="project" id="pro6">
-                <span id="Github">
-                  <img src="./imagens/loker.png" />
-                  Github
-                </span>
-                <p>Final Course Project ( PFC )</p>
-                <p>Eletronics/Arduino/Esp8866/C++/Matlab</p>
-              </div>
-
-              <div class="project" id="pro3">
-                <span id="Github">Github</span>
-
-                <p>Android Game</p>
-                <p>C#/Unity</p>
-              </div>
-              <div class="project" id="pro4">
-                <span id="Github">Github</span>
-
-                <p>Home Center WebPage</p>
-                <p>Html/Css/JavaScrip</p>
-              </div>
-              <div class="project" id="pro5">
-                <span id="Github">
-                  <img src="./imagens/loker.png" />
-                  Github
-                </span>
-                <p>This WebPage</p>
-                <p>Html/Css/JavaScrip</p>
-              </div>
+    <canvas id="canvas1" style="background-color:rgba(0, 0, 0, 1) !important;position:fixed; top:0;left:0;z-index:-1;"></canvas>
+    <main>        
+        <section id="header" style="height: 100vh;color: white;">
+            <div class="row h-100">
+                <!-- <div class="col">
+                    <div class="container h-100 d-flex justify-content-center">
+                        <div class="jumbotron my-auto">
+                            <h3>JavaScript</h3> <br>
+                            <h3>HTML5</h3>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col">
+                    <div class="container h-100 d-flex justify-content-center">
+                        <div class="jumbotron my-auto">
+                            <h1 class="ml2"> Eng. Diogo Romana</h1><br>
+                            <h1 class="ml3"> Software & Telecommunications & Electronics</h1><br>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col">
+                    <div class="container h-100 d-flex justify-content-center">
+                        <div class="jumbotron my-auto">
+                            <h3>Python3</h3>
+                            <h3>C</h3>
+                        </div>
+                    </div>
+                </div> -->
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="contac-section" id="contac-section">
-        <div class="container-contac">
-          <h2>Contacts</h2>
-          <div class="social-icons-contac">
-            <li><a href="#" class="fa fa-linkedin" id="icons1"></a></li>
-            <li><a href="#" class="fa fa-skype" id="icons1"></a></li>
-            <li>
-              <i
-                class="fa fa-envelope-open-o"
-                aria-hidden="true"
-                id="icons1"
-              ></i>
-            </li>
-            <div class="emailtext1">
-              <h4 id="emailid">d.romana1996@gmail.com</h4>
+        </section>
+        <section id="about_me" style="height: 100vh;color: rgb(252, 249, 249);">
+            <div class="container h-100 d-flex justify-content-center">
+                <div class="row">
+                    <div class="jumbotron my-auto">
+                        <h1> About Me</h1>
+                        <br>
+                        <p>Hello, my academic path was taken at I.S.E.L. ,where I studied electronics of telecommunications and computers and got my degree. Finished at 2019 been working since then
+                        for NOS as a Bold by Devoteam consultant, where I have been working on NOS routers : Automation Software & Hardware & Labs</p>
+                        <!-- <div  >
+                            <i class="fab fa-python" width="16px" height="16px"></i>
+                            <i class="fas fa-robot" width="16px" height="16px"></i>
+                            <i class="fas fa-network-wired" width="16px" height="16px"></i>
+                            <i class="fas fa-project-diagram" width="16px" height="16px"></i> 
+                            <img src="./images/html_5.png" alt="" width="16px" height="16px">     
+                            <img src="./images/NOS.png" alt="" width="16px" height="16px" style="background-color: white;">     
+                            <img src="./images/javascript.png" alt="" width="16px" height="16px">     
+                            <img src="./images/circuit.png" alt="Electronics" style="background-color: white;" width="16px" height="16px">     
+                            <img src="./images/Flask-1324888719511065447.png" alt="flask" style="background-color: white;"  width="16px" height="16px">     
+                            <img src="./images/bold_icon.jpg" alt="Bold by Devoteam" style="background-color: white;" width="16px" height="16px">     
+                        </div> -->
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="contact-paragraph">
-            <p>You can contact me via one of the buttons on top.</p>
-            <p>Best regards Diogo Romana</p>
-          </div>
-        </div>
-      </section>
+        </section>
+        <section id="projects" style="height: 100vh;color: rgb(247, 242, 242);">
+            <div class="container h-100 d-flex justify-content-center">
+                <div class="jumbotron my-auto">
+                    <h1> Projects</h1>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="contacts" style="height: 100vh;color: rgb(247, 242, 242);">
+            <div class="container h-100 d-flex justify-content-center">
+                <div class="jumbotron my-auto">
+                    <h1>Contacts</h1>
+                </div>
+            </div>
+        </section> -->
     </main>
   </body>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+  <script src="particals.js"></script>
+  <script src="generic.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="jquery.js"></script>
-  <script src="app.js"></script>
 </html>
