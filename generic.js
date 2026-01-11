@@ -29,7 +29,7 @@
   $( document ).ready(function() {
     current_working_words = skills
     animate_text()
-    });
+  });
 
   setTimeout(function(){ animate() }, 3000);
 

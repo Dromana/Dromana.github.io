@@ -16,10 +16,11 @@ const skills = ['Python3','Flask','Selenium','Javascript','Html5','C','Bash','Sh
                 'Windows','Linux & Unix','Wi-Fi 5','Wi-fi 6','TR-398','SaaS','Iaas','Azure','Ubunto',
                 'Docker','Virtual Machines','Routers','Kibana','Elastic Search','Automation','Telegram API',
                 'Rasberry Pi','ESP8866','LTSpice','Embedded Systems','Arduino',
-                'Mysql','SQLite3','Matlab','Sip','Integration','Git','Jira','Agile','Micro Services','FastAPI','Kafka','Syslog','Distributed System']
+                'Mysql','SQLite3','Matlab','Sip','Integration','Git','Jira','Agile','Micro Services',
+                'FastAPI','Kafka','Syslog','Distributed System','Cypress','PlayWright','RobotFramework','X-ray','Pipelines']
 const about_me = ['Proactive','Family','Friends','Fun','Objective','Jokes','Laugh','Structural Thinking','Lasagna','Beach','Swim','Drinks','Beer','Wine','Right tool for the job',
                 'Out of the box','Passion','Music','Sports','True']
-const companys = ['Askey','Sagem','Hitron','NOS','Bold by Devoteam','Huawei','Isel','Auto Tests Framework','Lab Designer','Lab maintainer']
+const companys = ['Askey','Sagem','Hitron','NOS','Bold by Devoteam','Huawei','Isel','Auto Tests Framework','Lab Designer','Lab maintainer','Usercentrics','EDP','Diconium']
 var current_working_words = []
 
 canvas.width = window.innerWidth;
@@ -29,6 +30,7 @@ canvas.style.background = 'black';
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.style.background = 'black';
 });
 
 const mouse = {
