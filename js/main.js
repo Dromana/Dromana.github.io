@@ -3,6 +3,8 @@ $(window).bind('scroll', function() {
     const scrollTop = $(window).scrollTop();
     if (scrollTop >= $('#projects').offset().top) {
         current_working_words = companys;
+    } else if (scrollTop >= $('#experience').offset().top) {
+        current_working_words = companys;
     } else if (scrollTop >= $('#about_me').offset().top) {
         current_working_words = about_me;
     } else if (scrollTop >= $('#header').offset().top) {
