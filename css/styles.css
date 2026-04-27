@@ -61,6 +61,24 @@
   grid-column: 2/3;
   grid-row: 3/4;
 }
+/* Typography */
+.ml2, .ml3, .navbar {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+}
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+.ml2, .ml3 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.ml3 {
+    font-weight: 900;
+    font-size: 2em;
+}
+
 /* Sections*/
 
 .contac-section {
